@@ -36,28 +36,26 @@ export default function IngredientsSection() {
       <div className="px-5 pt-12 lg:hidden">
         <div className="overflow-hidden rounded-xl border border-line shadow-[0_16px_40px_-20px_rgba(22,16,9,0.4)]">
           <img
-            src="/images/flatlay-dark.jpg"
-            alt="Flat lay of the Citrus Surge tub, powder scoop, shaker and fresh citrus"
-            className="aspect-[4/3] w-full object-cover object-[50%_42%]"
+            src="/images/tub-inferno.jpg"
+            alt="Citrus Surge tub on wet stone with a burst of orange behind it"
+            className="aspect-[4/3] w-full object-cover object-[50%_55%]"
             loading="lazy"
           />
         </div>
       </div>
 
-      {/* desktop: full-bleed photo left, solid cream under the copy on the right */}
-      <div className="absolute inset-0 hidden lg:block">
-        <img
-          src="/images/scoop-overhead-marble.jpg"
-          alt=""
-          className="h-full w-full object-cover object-[18%_center]"
-          loading="lazy"
-        />
-        <div className="ingredients-scrim absolute inset-0" />
-      </div>
+      {/* desktop: true 50/50 split — photo bleeds the left half, copy sits on solid cream */}
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-stretch">
+        <div className="relative hidden lg:block min-h-[560px]">
+          <img
+            src="/images/tub-inferno.jpg"
+            alt="Citrus Surge tub on wet stone with a burst of orange behind it"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_55%]"
+            loading="lazy"
+          />
+        </div>
 
-      <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-5 pb-12 pt-8 lg:grid-cols-2 lg:px-0 lg:py-24">
-        <div className="hidden lg:block" />
-        <div className="flex flex-col items-start gap-6">
+        <div className="flex flex-col items-start gap-6 px-5 pb-12 pt-8 lg:px-16 lg:py-24 xl:px-24">
           <H2>
             Radical Transparency,
             <br />

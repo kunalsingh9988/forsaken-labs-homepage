@@ -99,18 +99,6 @@ body {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* scrim for the full-bleed ingredients section — product stays visible on the
-   left while the right-hand copy column lands on a quiet, solid surface */
-.ingredients-scrim {
-  background: linear-gradient(
-    to right,
-    rgba(251, 245, 238, 0.05) 0%,
-    rgba(251, 245, 238, 0.55) 30%,
-    rgba(251, 245, 238, 0.94) 48%,
-    #fbf5ee 60%
-  );
-}
-
 details.faq summary::-webkit-details-marker { display: none; }
 
 details.faq summary svg.chev { transition: transform .25s ease; }
