@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mulish: "Mulish", "Inter", sans-serif;
+
+  /* Forsaken Labs palette — structure mapped from the reference design,
+     hues adapted to the brand (ink / warm sand / signal orange) */
+  --color-ink: #161009;
+  --color-ink-2: #221a12;
+  --color-cocoa: #45321f;
+  --color-espresso: #2b2119;
+  --color-cream: #fbf5ee;
+  --color-sand: #ecdccb;
+  --color-sand-2: #f3e9db;
+  --color-tan: #d9bda0;
+  --color-tan-2: #d1b294;
+  --color-line: #e2d5c5;
+  --color-orange: #f5640a;
+  --color-orange-2: #ff7a1f;
+  --color-moss: #8fae60;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink-2);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* grain texture used across tinted sections (from reference design) */
+.texture {
+  background-image: url("/assets/tex-1008b0ba-06b0-4915-9ac2-a5ec4b723f4f.png");
+  background-size: 128px 128px;
+  background-position: top left;
+  mix-blend-mode: overlay;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-slow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track-slow {
+  animation: marquee-slow 55s linear infinite;
+  will-change: transform;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+details.faq summary::-webkit-details-marker { display: none; }
+
+details.faq summary svg.chev { transition: transform .25s ease; }
+details.faq[open] summary svg.chev { transform: rotate(180deg); }
+details.faq > .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+details.faq[open] > .faq-body { grid-template-rows: 1fr; }
+details.faq .faq-body > div { overflow: hidden; }
