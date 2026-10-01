@@ -53,7 +53,7 @@ export default function Footer() {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0c08] via-[#0f0c08]/85 to-[#0f0c08]/55 lg:via-[#0f0c08]/70 lg:to-[#0f0c08]/10" />
-        <div className="relative mx-auto flex max-w-[1200px] px-5 py-14 lg:px-0 lg:py-20">
+        <div className="relative mx-auto flex max-w-[1200px] px-5 py-20 lg:px-0 lg:py-28">
           <div className="flex w-full max-w-[560px] flex-col items-start gap-6 text-left">
             <h2 className="font-mulish font-extrabold text-[26px] lg:text-[32px] leading-8 tracking-[-0.01em]">
               Unlock 10% off
