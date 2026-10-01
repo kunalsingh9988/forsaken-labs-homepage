@@ -5,7 +5,7 @@ const TABS = [
   {
     id: "focus",
     label: "Energy & Focus",
-    img: "/images/tub-splash-white.jpg",
+    img: "/images/tub-solo-dark.jpg",
     pos: "object-center",
     bullets: [
       "350mg of caffeine anhydrous for fast, clean energy",
@@ -16,8 +16,8 @@ const TABS = [
   {
     id: "pumps",
     label: "Pumps",
-    img: "/images/tub-solo-dark.jpg",
-    pos: "object-center",
+    img: "/images/tub-splash-swirl.jpg",
+    pos: "object-[50%_45%]",
     bullets: [
       "8g of pure L-citrulline — the full clinical dose",
       "Nitrosigine to keep blood flowing set after set",
@@ -27,8 +27,8 @@ const TABS = [
   {
     id: "strength",
     label: "Strength",
-    img: "/images/trio-glow.jpg",
-    pos: "object-[30%_center]",
+    img: "/images/trio-sunset.jpg",
+    pos: "object-center",
     bullets: [
       "3.2g of CarnoSyn beta-alanine for muscular endurance",
       "Betaine anhydrous to support power output under load",
@@ -38,8 +38,8 @@ const TABS = [
   {
     id: "endurance",
     label: "Endurance",
-    img: "/images/scoop-shaker-gym.jpg",
-    pos: "object-[50%_25%]",
+    img: "/images/trio-glow.jpg",
+    pos: "object-center",
     bullets: [
       "Electrolyte support for sessions that run long",
       "Taurine to buffer fatigue when the volume climbs",
