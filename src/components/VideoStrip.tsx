@@ -2,11 +2,15 @@ import { H2, Texture } from "./ui";
 
 const THUMBS = [
   { src: "/images/ugc-scoop-kitchen.jpg", pos: "object-[45%_35%]" },
+  { src: "/images/ugc-park-tub.jpg", pos: "object-[55%_35%]" },
   { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
   { src: "/images/ugc-locker-selfie.jpg", pos: "object-[50%_35%]" },
+  { src: "/images/ugc-shop-point.jpg", pos: "object-[45%_35%]" },
   { src: "/images/tub-inferno.jpg", pos: "object-[50%_55%]" },
-  { src: "/images/ugc-desk-tub.jpg", pos: "object-[58%_30%]" },
+  { src: "/images/ugc-car-gym.jpg", pos: "object-[60%_35%]" },
   { src: "/images/flatlay-dark.jpg", pos: "object-[50%_40%]" },
+  { src: "/images/ugc-desk-tub.jpg", pos: "object-[58%_30%]" },
+  { src: "/images/ugc-home-scoop.jpg", pos: "object-[50%_35%]" },
   { src: "/images/ugc-gym-selfie.jpg", pos: "object-[40%_30%]" },
 ];
 
@@ -19,7 +23,7 @@ export default function VideoStrip() {
 
       <div className="relative mt-8">
         <Texture opacity={0.1} />
-        <div className="no-scrollbar flex gap-3 overflow-x-auto px-5 lg:justify-center lg:px-[120px]">
+        <div className="no-scrollbar flex gap-3 overflow-x-auto px-5 lg:px-[120px]">
           {THUMBS.map((t, i) => (
             <div
               key={i}
