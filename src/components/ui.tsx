@@ -58,7 +58,7 @@ export function Logo({ light = false, className = "" }: { light?: boolean; class
         <path d="M16 1l4.4 10.6L31 16l-10.6 4.4L16 31l-4.4-10.6L1 16l10.6-4.4L16 1Z" className="fill-orange" />
         <circle cx="16" cy="16" r="3.4" className={light ? "fill-ink" : "fill-cream"} />
       </svg>
-      <span className={`font-mulish font-black tracking-[0.06em] leading-none text-[19px] ${light ? "text-cream" : "text-ink-2"}`}>
+      <span className={`font-sans font-black tracking-[0.06em] leading-none text-[19px] ${light ? "text-cream" : "text-ink-2"}`}>
         FORSAKEN
         <span className="text-orange"> LABS</span>
       </span>
@@ -89,7 +89,7 @@ export function Texture({ opacity = 0.15 }: { opacity?: number }) {
 
 export function Eyebrow({ children, className = "text-orange" }: { children: ReactNode; className?: string }) {
   return (
-    <p className={`font-mulish font-extrabold text-[12px] tracking-[0.18em] uppercase leading-4 ${className}`}>
+    <p className={`font-sans font-extrabold text-[12px] tracking-[0.18em] uppercase leading-4 ${className}`}>
       {children}
     </p>
   );

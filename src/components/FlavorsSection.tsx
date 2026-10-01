@@ -65,7 +65,7 @@ export default function FlavorsSection() {
               <button
                 key={f.id}
                 onClick={() => setActiveId(f.id)}
-                className={`rounded-full border px-5 py-2.5 text-[14px] font-mulish font-bold transition-colors cursor-pointer ${
+                className={`rounded-full border px-5 py-2.5 text-[14px] font-sans font-bold transition-colors cursor-pointer ${
                   activeId === f.id
                     ? "bg-ink text-cream border-ink"
                     : "bg-cream/60 text-ink-2 border-ink-2/25 hover:border-ink-2"
@@ -81,7 +81,7 @@ export default function FlavorsSection() {
             {flavor.notes.length > 0 && (
               <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
                 {flavor.notes.map((n) => (
-                  <li key={n} className="flex items-center gap-2 text-[13px] font-mulish font-bold text-cocoa">
+                  <li key={n} className="flex items-center gap-2 text-[13px] font-sans font-bold text-cocoa">
                     <span className="h-1.5 w-1.5 rounded-full bg-orange" />
                     {n}
                   </li>
@@ -94,11 +94,11 @@ export default function FlavorsSection() {
             <div className="flex items-center gap-2">
               <Stars size="w-4 h-4" />
               <span className="text-[13px] text-cocoa">
-                <span className="font-mulish font-bold text-ink-2">{flavor.rating}</span> · {flavor.reviews} reviews
+                <span className="font-sans font-bold text-ink-2">{flavor.rating}</span> · {flavor.reviews} reviews
               </span>
             </div>
           ) : (
-            <a href="#footer" className="text-[13px] font-mulish font-bold text-orange underline underline-offset-4">
+            <a href="#footer" className="text-[13px] font-sans font-bold text-orange underline underline-offset-4">
               Get notified →
             </a>
           )}

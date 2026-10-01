@@ -40,7 +40,7 @@ export default function FaqSection() {
           <H2>Got Questions?</H2>
           <p className="max-w-[380px] text-[15px] lg:text-[16px] leading-7 text-cocoa">
             Everything you need to know about Citrus Surge and the Forsaken way. Still stuck?{" "}
-            <a href="#footer" className="font-mulish font-bold text-orange underline underline-offset-4">
+            <a href="#footer" className="font-sans font-bold text-orange underline underline-offset-4">
               Talk to us
             </a>
             .
@@ -51,7 +51,7 @@ export default function FaqSection() {
           {FAQS.map((f) => (
             <details key={f.q} className="faq border-b border-ink-2/15 first:border-t">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5">
-                <span className="font-mulish text-[15px] lg:text-[17px] font-bold text-ink-2">{f.q}</span>
+                <span className="font-sans text-[15px] lg:text-[17px] font-bold text-ink-2">{f.q}</span>
                 <svg
                   viewBox="0 0 18 18"
                   className="chev h-[18px] w-[18px] shrink-0 text-ink-2"

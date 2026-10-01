@@ -70,7 +70,7 @@ export default function IngredientsSection() {
             {STATS.map((s) => (
               <div key={s.label} className="flex flex-col gap-1 border-l-2 border-orange pl-4">
                 <span className="font-display text-[28px] lg:text-[32px] font-bold leading-8 text-ink">{s.value}</span>
-                <span className="text-[11px] lg:text-[12px] font-mulish font-bold uppercase tracking-[0.06em] text-cocoa whitespace-nowrap">
+                <span className="text-[11px] lg:text-[12px] font-sans font-bold uppercase tracking-[0.06em] text-cocoa whitespace-nowrap">
                   {s.label}
                 </span>
               </div>
@@ -79,7 +79,7 @@ export default function IngredientsSection() {
 
           <button
             onClick={() => setOpen(true)}
-            className="mt-2 inline-flex items-center gap-2 text-[15px] font-mulish font-bold text-ink-2 underline underline-offset-4 hover:text-orange transition-colors cursor-pointer"
+            className="mt-2 inline-flex items-center gap-2 text-[15px] font-sans font-bold text-ink-2 underline underline-offset-4 hover:text-orange transition-colors cursor-pointer"
           >
             See Full Supplement Facts
             <svg viewBox="0 0 8 13" className="h-3.5 w-auto" fill="currentColor">
@@ -97,7 +97,7 @@ export default function IngredientsSection() {
         className="m-auto w-[92vw] max-w-[460px] rounded-xl bg-cream p-0 shadow-2xl backdrop:bg-ink/60"
       >
         <div className="flex items-center justify-between border-b-4 border-ink px-6 pb-4 pt-6">
-          <h3 className="font-mulish font-black text-[22px] leading-6 text-ink">Supplement Facts</h3>
+          <h3 className="font-sans font-black text-[22px] leading-6 text-ink">Supplement Facts</h3>
           <button
             aria-label="Close"
             onClick={() => setOpen(false)}
@@ -114,7 +114,7 @@ export default function IngredientsSection() {
             {FACTS.map(([name, dose]) => (
               <li key={name} className="flex items-center justify-between py-2.5">
                 <span className="text-[14px] font-medium text-ink-2">{name}</span>
-                <span className="font-mulish text-[14px] font-bold text-ink">{dose}</span>
+                <span className="font-sans text-[14px] font-bold text-ink">{dose}</span>
               </li>
             ))}
           </ul>

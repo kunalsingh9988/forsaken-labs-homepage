@@ -35,7 +35,7 @@ export default function CreativeSection() {
               href="https://www.instagram.com/forsaken_labs/"
               target="_blank"
               rel="noreferrer"
-              className="font-mulish font-bold text-orange hover:underline"
+              className="font-sans font-bold text-orange hover:underline"
             >
               @forsaken_labs
             </a>{" "}

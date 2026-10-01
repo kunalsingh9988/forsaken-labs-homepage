@@ -31,7 +31,7 @@ export default function CompareTabs() {
             <button
               key={t}
               onClick={() => setActive(i)}
-              className={`rounded-full border px-5 py-2.5 text-[14px] font-mulish font-bold transition-colors cursor-pointer ${
+              className={`rounded-full border px-5 py-2.5 text-[14px] font-sans font-bold transition-colors cursor-pointer ${
                 active === i
                   ? "bg-ink text-cream border-ink"
                   : "bg-transparent text-ink-2 border-ink-2/25 hover:border-ink-2"
@@ -46,11 +46,11 @@ export default function CompareTabs() {
           <div className="grid grid-cols-[1.4fr_1fr_1fr] items-stretch">
             <div className="px-4 lg:px-6 py-4" />
             <div className="bg-sand-2 px-3 lg:px-6 py-4 flex flex-col items-center justify-center gap-0.5">
-              <span className="font-mulish font-black text-[13px] lg:text-[15px] tracking-[0.06em] text-ink">FORSAKEN LABS</span>
+              <span className="font-sans font-black text-[13px] lg:text-[15px] tracking-[0.06em] text-ink">FORSAKEN LABS</span>
               <span className="text-[11px] text-cocoa">Citrus Surge</span>
             </div>
             <div className="px-3 lg:px-6 py-4 flex items-center justify-center">
-              <span className="font-mulish font-bold text-[13px] lg:text-[15px] text-ink-2 text-center">
+              <span className="font-sans font-bold text-[13px] lg:text-[15px] text-ink-2 text-center">
                 {TABS[active]}
               </span>
             </div>

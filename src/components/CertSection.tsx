@@ -57,7 +57,7 @@ export default function CertSection() {
           <p className="max-w-[420px] text-[15px] lg:text-[16px] leading-7 text-cocoa">
             Every batch of Citrus Surge is sent to independent labs before it ships. No exceptions, no shortcuts.
           </p>
-          <span className="inline-flex items-center gap-2 rounded-full bg-moss/15 px-4 py-2 font-mulish text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#4f6b2a]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-moss/15 px-4 py-2 font-sans text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#4f6b2a]">
             <svg viewBox="0 0 12 10" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <path d="M1.5 5.5 4.5 8.5 10.5 1.5" />
             </svg>
@@ -72,7 +72,7 @@ export default function CertSection() {
               className="flex flex-col gap-3 rounded-xl border border-line bg-cream p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange/50 hover:shadow-[0_14px_36px_-16px_rgba(22,16,9,0.3)]"
             >
               <span className="text-orange">{c.icon}</span>
-              <h3 className="font-mulish text-[16px] font-extrabold text-ink-2">{c.title}</h3>
+              <h3 className="font-sans text-[16px] font-extrabold text-ink-2">{c.title}</h3>
               <p className="text-[13px] leading-5 text-cocoa">{c.text}</p>
             </div>
           ))}

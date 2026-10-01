@@ -22,7 +22,7 @@ export default function PressStrip() {
       <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-8">
         {PRESS.map((p) => (
           <figure key={p.wordmark} className="flex flex-col items-center gap-5 text-center">
-            <span className="font-mulish font-black text-[18px] lg:text-[20px] tracking-[0.22em] text-cream">
+            <span className="font-sans font-black text-[18px] lg:text-[20px] tracking-[0.22em] text-cream">
               {p.wordmark}
             </span>
             <blockquote className="font-display text-[18px] leading-[28px] text-cream/85 max-w-[320px]">

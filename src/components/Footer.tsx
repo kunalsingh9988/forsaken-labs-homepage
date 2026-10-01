@@ -55,14 +55,14 @@ export default function Footer() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0c08] via-[#0f0c08]/85 to-[#0f0c08]/55 lg:via-[#0f0c08]/70 lg:to-[#0f0c08]/10" />
         <div className="relative mx-auto flex max-w-[1200px] px-5 py-20 lg:px-0 lg:py-28">
           <div className="flex w-full max-w-[560px] flex-col items-start gap-6 text-left">
-            <h2 className="font-mulish font-extrabold text-[26px] lg:text-[32px] leading-8 tracking-[-0.01em]">
+            <h2 className="font-sans font-extrabold text-[26px] lg:text-[32px] leading-8 tracking-[-0.01em]">
               Unlock 10% off
             </h2>
             <p className="max-w-[420px] text-[15px] leading-6 text-cream/70">
               Join the Forsaken — early access to drops, exclusive discounts, and zero spam.
             </p>
             {subscribed ? (
-              <p className="rounded-lg border border-moss/40 bg-moss/10 px-6 py-3 font-mulish text-[15px] font-bold text-moss">
+              <p className="rounded-lg border border-moss/40 bg-moss/10 px-6 py-3 font-sans text-[15px] font-bold text-moss">
                 Welcome to the Forsaken. Check your inbox.
               </p>
             ) : (
@@ -79,11 +79,11 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="h-12 flex-1 rounded-lg border border-cream/20 bg-cream/5 px-4 font-mulish text-[15px] text-cream placeholder:text-cream/40 outline-none focus:border-orange"
+                  className="h-12 flex-1 rounded-lg border border-cream/20 bg-cream/5 px-4 font-sans text-[15px] text-cream placeholder:text-cream/40 outline-none focus:border-orange"
                 />
                 <button
                   type="submit"
-                  className="h-12 shrink-0 rounded-lg bg-orange px-6 font-mulish text-[15px] font-extrabold text-ink transition-colors hover:bg-orange-2 cursor-pointer"
+                  className="h-12 shrink-0 rounded-lg bg-orange px-6 font-sans text-[15px] font-extrabold text-ink transition-colors hover:bg-orange-2 cursor-pointer"
                 >
                   Submit
                 </button>
@@ -129,7 +129,7 @@ export default function Footer() {
           </div>
           {COLS.map((col) => (
             <div key={col.title} className="flex flex-col gap-3">
-              <h3 className="font-mulish text-[12px] font-extrabold uppercase tracking-[0.16em] text-cream/50">
+              <h3 className="font-sans text-[12px] font-extrabold uppercase tracking-[0.16em] text-cream/50">
                 {col.title}
               </h3>
               {col.links.map((l) => (
@@ -144,7 +144,7 @@ export default function Footer() {
         {/* reviews strip */}
         <div className="flex flex-col items-center gap-2 border-t border-cream/10 py-8 text-center">
           <Stars size="w-4 h-4" />
-          <p className="font-mulish text-[13px] font-bold text-cream/80">1,000+ verified 5-star reviews</p>
+          <p className="font-sans text-[13px] font-bold text-cream/80">1,000+ verified 5-star reviews</p>
         </div>
 
         {/* legal + payments */}

@@ -34,21 +34,21 @@ export default function ValueSection() {
 
         <div className="w-full overflow-hidden rounded-xl border border-ink-2/15 bg-cream">
           <div className="grid grid-cols-[1.5fr_1fr] border-b border-ink-2/10 px-5 lg:px-7 py-4">
-            <span className="font-mulish text-[12px] font-extrabold uppercase tracking-[0.14em] text-cocoa">
+            <span className="font-sans text-[12px] font-extrabold uppercase tracking-[0.14em] text-cocoa">
               Bought separately
             </span>
-            <span className="text-right font-mulish text-[12px] font-extrabold uppercase tracking-[0.14em] text-cocoa">
+            <span className="text-right font-sans text-[12px] font-extrabold uppercase tracking-[0.14em] text-cocoa">
               Cost
             </span>
           </div>
           {ITEMS.map((i) => (
             <div key={i.name} className="grid grid-cols-[1.5fr_1fr] items-center border-b border-ink-2/10 px-5 lg:px-7 py-4">
               <span className="text-[13px] lg:text-[15px] leading-5 text-ink-2">{i.name}</span>
-              <span className="text-right font-mulish font-bold text-[14px] lg:text-[16px] text-ink-2">{i.price}</span>
+              <span className="text-right font-sans font-bold text-[14px] lg:text-[16px] text-ink-2">{i.price}</span>
             </div>
           ))}
           <div className="grid grid-cols-[1.5fr_1fr] items-center px-5 lg:px-7 py-5">
-            <span className="font-mulish text-[12px] font-extrabold uppercase tracking-[0.14em] text-cocoa">
+            <span className="font-sans text-[12px] font-extrabold uppercase tracking-[0.14em] text-cocoa">
               Buying it all
             </span>
             <span className="text-right font-display text-[20px] font-bold text-ink line-through decoration-orange/70">
@@ -56,7 +56,7 @@ export default function ValueSection() {
             </span>
           </div>
           <div className="grid grid-cols-[1.5fr_1fr] items-center bg-ink px-5 lg:px-7 py-5">
-            <span className="flex items-center gap-3 font-mulish font-black text-[14px] lg:text-[16px] tracking-[0.04em] text-cream">
+            <span className="flex items-center gap-3 font-sans font-black text-[14px] lg:text-[16px] tracking-[0.04em] text-cream">
               <CheckPill dark /> FORSAKEN LABS
             </span>
             <span className="text-right font-display text-[22px] font-bold text-orange-2">$49.99</span>

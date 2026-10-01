@@ -45,7 +45,7 @@ export default function StepsSection() {
                   className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${s.pos}`}
                   loading="lazy"
                 />
-                <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 font-mulish text-[12px] font-extrabold tracking-[0.14em] text-orange-2">
+                <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 font-sans text-[12px] font-extrabold tracking-[0.14em] text-orange-2">
                   {s.n}
                 </span>
               </div>

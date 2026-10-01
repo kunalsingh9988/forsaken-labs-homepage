@@ -149,7 +149,7 @@ export default function ReviewsSection() {
               <button
                 key={t}
                 onClick={() => setTab(t)}
-                className={`shrink-0 rounded-full border px-4 py-2 text-[13px] font-mulish font-bold transition-colors cursor-pointer ${
+                className={`shrink-0 rounded-full border px-4 py-2 text-[13px] font-sans font-bold transition-colors cursor-pointer ${
                   tab === t ? "bg-ink text-cream border-ink" : "text-ink-2 border-ink-2/25 hover:border-ink-2"
                 }`}
               >
@@ -174,7 +174,7 @@ export default function ReviewsSection() {
               <h3 className="font-display text-[22px] lg:text-[24px] font-bold leading-7 text-ink">{r.title}</h3>
               <p className="text-[14px] lg:text-[15px] leading-6 text-cocoa">{r.body}</p>
               <div className="mt-auto flex items-center gap-2 pt-2">
-                <span className="font-mulish text-[13px] font-bold text-ink-2">{r.name}</span>
+                <span className="font-sans text-[13px] font-bold text-ink-2">{r.name}</span>
                 <span className="flex items-center gap-1 text-[12px] text-cocoa">
                   <svg viewBox="0 0 12 12" className="h-3.5 w-3.5 text-moss" fill="currentColor">
                     <path d="M6 0a6 6 0 1 0 0 12A6 6 0 0 0 6 0Zm2.9 4.1-3.6 4a.6.6 0 0 1-.9 0L3.1 6.7a.6.6 0 1 1 .8-.8l1 1.2 3.2-3.5a.6.6 0 1 1 .8.9Z" />

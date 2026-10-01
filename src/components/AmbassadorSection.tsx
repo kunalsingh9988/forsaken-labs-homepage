@@ -22,7 +22,7 @@ export default function AmbassadorSection() {
               the shelf respected the lifter — fully dosed, fully disclosed, zero fluff.&rdquo;
             </blockquote>
             <figcaption className="text-[14px] leading-5 text-espresso">
-              <span className="font-mulish font-bold text-ink">The Forsaken Team</span>
+              <span className="font-sans font-bold text-ink">The Forsaken Team</span>
               <span className="mx-2 opacity-50">·</span>
               Founders &amp; Lifters
             </figcaption>

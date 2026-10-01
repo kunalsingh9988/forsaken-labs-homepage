@@ -67,7 +67,7 @@ export default function ScienceTabs() {
             <button
               key={t.id}
               onClick={() => setActive(t)}
-              className={`rounded-full border px-5 py-2.5 text-[14px] font-mulish font-bold transition-colors cursor-pointer ${
+              className={`rounded-full border px-5 py-2.5 text-[14px] font-sans font-bold transition-colors cursor-pointer ${
                 active.id === t.id
                   ? "bg-ink text-cream border-ink"
                   : "bg-transparent text-ink-2 border-ink-2/25 hover:border-ink-2"

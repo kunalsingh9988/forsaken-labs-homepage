@@ -29,7 +29,7 @@ function CartIcon() {
 export function AnnouncementBar() {
   return (
     <div className="bg-ink text-cream h-[41px] flex items-center justify-center px-4 relative z-40">
-      <p className="font-mulish text-[11px] lg:text-[13px] leading-[16px] tracking-[0.02em] text-center">
+      <p className="font-sans text-[11px] lg:text-[13px] leading-[16px] tracking-[0.02em] text-center">
         <span className="font-extrabold text-orange-2">CITRUS SURGE</span>
         <span className="mx-1.5 lg:mx-2 opacity-60">—</span>
         THE FIRST DROP IS LIVE<span className="hidden sm:inline">. LIMITED STOCK.</span>
@@ -133,12 +133,12 @@ export default function Header() {
                 key={l.label}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="py-4 text-[18px] font-mulish font-bold text-ink-2 border-b border-line/60"
+                className="py-4 text-[18px] font-sans font-bold text-ink-2 border-b border-line/60"
               >
                 {l.label}
               </a>
             ))}
-            <a href="#" className="py-4 text-[18px] font-mulish font-bold text-ink-2 border-b border-line/60">
+            <a href="#" className="py-4 text-[18px] font-sans font-bold text-ink-2 border-b border-line/60">
               Account
             </a>
           </nav>
@@ -175,12 +175,12 @@ export default function Header() {
             <svg viewBox="0 0 24 20" className="w-12 h-10 text-ink-2/30" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M4 5h16l-1.5 11h-13L4 5Zm4-3.5h8l1 3.5H7l1-3.5Z" strokeLinejoin="round" />
             </svg>
-            <p className="font-mulish font-bold text-[17px] text-ink-2">Your cart is empty</p>
+            <p className="font-sans font-bold text-[17px] text-ink-2">Your cart is empty</p>
             <p className="text-[14px] text-cocoa">Fuel up — Citrus Surge is waiting.</p>
             <a
               href="#flavors"
               onClick={() => setCartOpen(false)}
-              className="mt-2 bg-orange text-ink rounded-lg px-6 py-3 text-[15px] font-mulish font-bold"
+              className="mt-2 bg-orange text-ink rounded-lg px-6 py-3 text-[15px] font-sans font-bold"
             >
               Shop Citrus Surge
             </a>

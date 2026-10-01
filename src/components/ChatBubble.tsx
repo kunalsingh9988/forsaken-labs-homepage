@@ -9,7 +9,7 @@ export default function ChatBubble() {
         <div className="fixed bottom-[92px] right-4 lg:right-6 z-40 w-[300px] rounded-2xl border border-line bg-cream p-5 shadow-2xl">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="font-mulish font-extrabold text-[15px] text-ink">Talk to the Lab</p>
+              <p className="font-sans font-extrabold text-[15px] text-ink">Talk to the Lab</p>
               <p className="mt-1 text-[13px] leading-5 text-cocoa">
                 Questions about Citrus Surge, dosing, or your order? We usually reply within the hour.
               </p>
@@ -22,7 +22,7 @@ export default function ChatBubble() {
           </div>
           <a
             href="mailto:support@forsaken-labs.com"
-            className="mt-4 flex items-center justify-center rounded-lg bg-ink py-3 font-mulish text-[14px] font-bold text-cream hover:bg-espresso transition-colors"
+            className="mt-4 flex items-center justify-center rounded-lg bg-ink py-3 font-sans text-[14px] font-bold text-cream hover:bg-espresso transition-colors"
           >
             Message us
           </a>

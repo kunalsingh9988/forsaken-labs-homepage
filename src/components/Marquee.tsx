@@ -21,7 +21,7 @@ export default function Marquee() {
         {row.map((item, i) => (
           <div key={i} className="flex items-center gap-3 shrink-0">
             <img src={item.icon} alt="" className="w-6 h-6 [filter:brightness(0)]" />
-            <span className="font-mulish font-bold text-[15px] lg:text-[16px] leading-5 text-ink whitespace-nowrap">
+            <span className="font-sans font-bold text-[15px] lg:text-[16px] leading-5 text-ink whitespace-nowrap">
               {item.label}
             </span>
           </div>

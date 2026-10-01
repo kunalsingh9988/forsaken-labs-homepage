@@ -46,7 +46,7 @@ export default function TestimonialCarousel() {
                 &ldquo;{q.quote}&rdquo;
               </blockquote>
               <figcaption className="text-[14px] leading-5 text-cocoa">
-                <span className="font-mulish font-bold text-ink-2">{q.name}</span>
+                <span className="font-sans font-bold text-ink-2">{q.name}</span>
                 <span className="mx-2 opacity-50">·</span>
                 {q.role}
               </figcaption>
