@@ -3,23 +3,28 @@ import { Stars } from "./ui";
 export default function Hero() {
   return (
     <section className="relative">
-      {/* bg image */}
+      {/* bg image — portrait composition on mobile, landscape trio on desktop */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/images/hero-trio-dark.jpg"
+          src="/images/hero-portrait.jpg"
           alt="Forsaken Labs Citrus Surge pre-workout tubs surrounded by fresh oranges"
-          className="h-full w-full object-cover object-[68%_center] lg:object-center"
+          className="h-full w-full object-cover object-top lg:hidden"
         />
-        {/* readability scrims — mobile gets even vertical coverage for the centered
-            copy; desktop fades left so the product trio stays visible on the right */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/65 via-ink/40 to-ink/75 lg:hidden" />
+        <img
+          src="/images/hero-trio-dark.jpg"
+          alt=""
+          className="hidden h-full w-full object-cover object-center lg:block"
+        />
+        {/* mobile: darken the lower half so the bottom-anchored copy stays legible;
+            desktop fades left so the product trio stays visible on the right */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent lg:hidden" />
         <div className="absolute inset-0 hidden bg-gradient-to-r from-ink/80 via-ink/30 to-ink/5 lg:block" />
         <div className="absolute inset-0 hidden bg-gradient-to-t from-ink/50 to-transparent lg:block" />
       </div>
 
-      <div className="relative flex min-h-[720px] lg:min-h-0 lg:h-[742px] flex-col justify-center">
+      <div className="relative flex h-[80vh] min-h-[540px] lg:h-[742px] lg:min-h-0 flex-col justify-end lg:justify-center">
         <div className="w-full px-5 lg:px-[120px]">
-          <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 py-16 text-center lg:mx-0 lg:items-start lg:text-left">
+          <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 pb-12 text-center lg:mx-0 lg:items-start lg:py-16 lg:pb-0 lg:text-left">
             {/* rating row */}
             <div className="flex items-end gap-2">
               <Stars size="w-[15px] h-[15px]" />
