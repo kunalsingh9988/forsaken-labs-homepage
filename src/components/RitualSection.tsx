@@ -11,7 +11,7 @@ const POINTS = [
 export default function RitualSection() {
   return (
     <section className="relative bg-ink">
-      <div className="mx-auto max-w-[1200px] lg:h-[656px] flex flex-col lg:flex-row items-stretch">
+      <div className="lg:h-[656px] flex flex-col lg:flex-row items-stretch">
         <div className="lg:w-1/2 relative min-h-[320px] lg:min-h-0">
           <img
             src="/images/scoop-shaker-gym.jpg"
@@ -21,7 +21,7 @@ export default function RitualSection() {
           />
         </div>
 
-        <div className="lg:w-1/2 flex items-center px-5 py-12 lg:px-16 lg:py-16">
+        <div className="lg:w-1/2 flex items-center px-5 py-12 lg:px-16 lg:py-16 xl:px-24">
           <div className="flex flex-col gap-6">
             <Eyebrow>The Forsaken Ritual</Eyebrow>
             <H2 className="text-cream">

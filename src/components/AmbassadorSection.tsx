@@ -4,7 +4,7 @@ export default function AmbassadorSection() {
   return (
     <section className="relative bg-tan overflow-hidden">
       <Texture opacity={0.22} />
-      <div className="relative mx-auto flex max-w-[1200px] flex-col lg:h-[600px] lg:flex-row items-stretch">
+      <div className="relative flex flex-col lg:h-[600px] lg:flex-row items-stretch">
         <div className="relative min-h-[300px] lg:min-h-0 lg:w-1/2">
           <img
             src="/images/tub-bench-dark.jpg"
@@ -14,7 +14,7 @@ export default function AmbassadorSection() {
           />
         </div>
 
-        <div className="flex items-center px-5 py-12 lg:w-1/2 lg:px-16">
+        <div className="flex items-center px-5 py-12 lg:w-1/2 lg:px-16 xl:px-24">
           <div className="flex flex-col gap-6">
             <Eyebrow>From the Team</Eyebrow>
             <blockquote className="font-display font-bold text-[24px] leading-[34px] lg:text-[30px] lg:leading-[40px] text-ink">

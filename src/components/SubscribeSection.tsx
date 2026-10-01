@@ -11,7 +11,7 @@ const PERKS = [
 export default function SubscribeSection() {
   return (
     <section className="relative bg-ink">
-      <div className="mx-auto flex max-w-[1200px] flex-col lg:h-[656px] lg:flex-row items-stretch">
+      <div className="flex flex-col lg:h-[656px] lg:flex-row items-stretch">
         <div className="relative min-h-[320px] lg:min-h-0 lg:w-1/2">
           <img
             src="/images/tub-bench-shaker.jpg"
@@ -21,7 +21,7 @@ export default function SubscribeSection() {
           />
         </div>
 
-        <div className="flex items-center px-5 py-12 lg:w-1/2 lg:px-16 lg:py-16">
+        <div className="flex items-center px-5 py-12 lg:w-1/2 lg:px-16 lg:py-16 xl:px-24">
           <div className="flex flex-col items-start gap-6">
             <H2 className="text-cream">
               Built for the
