@@ -2,7 +2,7 @@ import { Stars } from "./ui";
 
 export default function Hero() {
   return (
-    <section className="relative">
+    <section id="top" className="relative">
       {/* bg image — portrait composition on mobile, landscape trio on desktop */}
       <div className="absolute inset-0 overflow-hidden">
         <img

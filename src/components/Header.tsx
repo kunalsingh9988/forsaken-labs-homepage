@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./ui";
 
 const NAV_LINKS = [
+  { label: "Home", href: "#top" },
   { label: "Shop", href: "#flavors" },
   { label: "The Science", href: "#science" },
   { label: "Reviews", href: "#reviews" },
