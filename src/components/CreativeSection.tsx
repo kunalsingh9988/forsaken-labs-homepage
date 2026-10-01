@@ -3,13 +3,8 @@ import { H2, Texture } from "./ui";
 const TILES = [
   { src: "/images/flatlay-dark.jpg", pos: "object-center" },
   { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
-  { src: "/images/trio-glow.jpg", pos: "object-[55%_center]" },
-  { src: "/images/tub-solo-dark.jpg", pos: "object-center" },
   { src: "/images/scoop-shaker-gym.jpg", pos: "object-[50%_15%]" },
-  { src: "/images/scoop-overhead-marble.jpg", pos: "object-[50%_70%]" },
-  { src: "/images/tub-bench-shaker.jpg", pos: "object-[55%_center]" },
-  { src: "/images/tub-marble-bright.jpg", pos: "object-[60%_60%]" },
-  { src: "/images/tub-splash-white.jpg", pos: "object-[30%_30%]" },
+  { src: "/images/tub-inferno.jpg", pos: "object-[50%_55%]" },
 ];
 
 export default function CreativeSection() {
@@ -17,7 +12,7 @@ export default function CreativeSection() {
     <section className="relative bg-cream px-5 py-12 lg:px-[120px] lg:py-20 overflow-hidden">
       <Texture opacity={0.1} />
       <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className="grid aspect-square w-full max-w-[568px] grid-cols-3 gap-2 overflow-hidden rounded-xl mx-auto">
+        <div className="grid aspect-square w-full max-w-[568px] grid-cols-2 gap-2 overflow-hidden rounded-xl mx-auto">
           {TILES.map((t, i) => (
             <div key={i} className="overflow-hidden">
               <img
