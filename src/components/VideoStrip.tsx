@@ -21,13 +21,14 @@ export default function VideoStrip() {
         <H2 center>Trusted by Lifters Everywhere</H2>
       </div>
 
-      <div className="relative mt-8">
+      <div className="video-strip relative mt-8">
         <Texture opacity={0.1} />
-        <div className="no-scrollbar flex gap-3 overflow-x-auto px-5 lg:px-[120px]">
-          {THUMBS.map((t, i) => (
+        <div className="marquee-track-slow flex w-max">
+          {[...THUMBS, ...THUMBS].map((t, i) => (
             <div
               key={i}
-              className="group relative w-[150px] h-[267px] lg:w-[192px] lg:h-[341px] shrink-0 rounded-lg overflow-hidden bg-ink-2 cursor-pointer"
+              aria-hidden={i >= THUMBS.length}
+              className="group relative mr-5 lg:mr-6 w-[150px] h-[267px] lg:w-[192px] lg:h-[341px] shrink-0 rounded-lg overflow-hidden bg-ink-2 cursor-pointer"
             >
               <img
                 src={t.src}
