@@ -14,9 +14,9 @@ export default function SubscribeSection() {
       <div className="flex flex-col lg:h-[656px] lg:flex-row items-stretch">
         <div className="relative min-h-[320px] lg:min-h-0 lg:w-1/2">
           <img
-            src="/images/tub-bench-towel.jpg"
-            alt="Citrus Surge tub on a gym bench with dumbbells and a lifting strap"
-            className="absolute inset-0 h-full w-full object-cover object-[12%_center]"
+            src="/images/tub-bench-warm.jpg"
+            alt="Citrus Surge tub on a gym bench with a lifting strap and dumbbells behind"
+            className="absolute inset-0 h-full w-full object-cover object-[8%_center]"
             loading="lazy"
           />
         </div>
