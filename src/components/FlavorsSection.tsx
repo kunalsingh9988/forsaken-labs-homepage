@@ -42,22 +42,18 @@ export default function FlavorsSection() {
         </div>
       </div>
 
-      {/* desktop: full-bleed photo left, quiet gradient under the copy on the right */}
-      <div className="absolute inset-0 hidden lg:block">
-        <img
-          src="/images/tub-marble-bright.jpg"
-          alt=""
-          className="h-full w-full object-cover object-[30%_center]"
-          loading="lazy"
-        />
-        <div className="photo-scrim absolute inset-0" />
-      </div>
+      {/* desktop: true 50/50 split — photo bleeds the left half, copy sits on solid cream */}
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-stretch">
+        <div className="relative hidden lg:block">
+          <img
+            src="/images/tub-solo-marble-splash.jpg"
+            alt="Citrus Surge tub on marble steps with a citrus splash, ice and fresh oranges"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_35%]"
+            loading="lazy"
+          />
+        </div>
 
-      <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-5 pb-12 pt-8 lg:grid-cols-2 lg:px-0 lg:py-24">
-        {/* left stays empty on desktop — the product photo shows through */}
-        <div className="hidden lg:block" />
-
-        <div className="flex flex-col items-start gap-6">
+        <div className="flex flex-col items-start gap-6 px-5 pb-12 pt-8 lg:px-16 lg:py-24 xl:px-24">
           <h2 className="font-display font-bold text-[32px] leading-[36px] lg:text-[48px] lg:leading-[52px] text-ink">
             A Surge for
             <br />
