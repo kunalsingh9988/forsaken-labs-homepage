@@ -1,15 +1,15 @@
 import { H2, Texture } from "./ui";
 
 const TILES = [
-  { src: "/images/tub-splash-white.jpg", pos: "object-[30%_30%]" },
+  { src: "/images/flatlay-dark.jpg", pos: "object-center" },
+  { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
+  { src: "/images/trio-glow.jpg", pos: "object-[55%_center]" },
+  { src: "/images/tub-solo-dark.jpg", pos: "object-center" },
   { src: "/images/scoop-shaker-gym.jpg", pos: "object-[50%_15%]" },
-  { src: "/images/hero-trio-dark.jpg", pos: "object-[20%_center]" },
-  { src: "/images/tub-marble-bright.jpg", pos: "object-[60%_60%]" },
-  { src: "/images/tub-bench-shaker.jpg", pos: "object-[55%_center]" },
   { src: "/images/scoop-overhead-marble.jpg", pos: "object-[50%_70%]" },
-  { src: "/images/tub-bench-dark.jpg", pos: "object-center" },
-  { src: "/images/hero-trio-dark.jpg", pos: "object-[80%_center]" },
-  { src: "/images/tub-marble-bright.jpg", pos: "object-[25%_25%]" },
+  { src: "/images/tub-bench-shaker.jpg", pos: "object-[55%_center]" },
+  { src: "/images/tub-marble-bright.jpg", pos: "object-[60%_60%]" },
+  { src: "/images/tub-splash-white.jpg", pos: "object-[30%_30%]" },
 ];
 
 export default function CreativeSection() {

@@ -34,9 +34,9 @@ export default function FlavorsSection() {
       <div className="px-5 pt-12 lg:hidden">
         <div className="overflow-hidden rounded-xl border border-line shadow-[0_16px_40px_-20px_rgba(22,16,9,0.4)]">
           <img
-            src="/images/tub-marble-bright.jpg"
-            alt="Citrus Surge tub and shaker on marble with fresh oranges"
-            className="aspect-[4/3] w-full object-cover object-[35%_40%]"
+            src="/images/tub-solo-marble-splash.jpg"
+            alt="Citrus Surge tub with a citrus splash and ice on marble"
+            className="aspect-[4/3] w-full object-cover object-[50%_45%]"
             loading="lazy"
           />
         </div>

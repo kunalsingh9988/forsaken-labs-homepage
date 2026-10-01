@@ -1,13 +1,13 @@
 import { H2, Texture } from "./ui";
 
 const THUMBS = [
-  { src: "/images/scoop-shaker-gym.jpg", pos: "object-[40%_top]" },
-  { src: "/images/hero-trio-dark.jpg", pos: "object-[15%_center]" },
-  { src: "/images/tub-bench-dark.jpg", pos: "object-center" },
-  { src: "/images/scoop-overhead-marble.jpg", pos: "object-[30%_center]" },
-  { src: "/images/tub-bench-shaker.jpg", pos: "object-[55%_center]" },
+  { src: "/images/scoop-shaker-gym.jpg", pos: "object-[40%_25%]" },
+  { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
+  { src: "/images/flatlay-dark.jpg", pos: "object-[50%_40%]" },
+  { src: "/images/tub-solo-dark.jpg", pos: "object-center" },
+  { src: "/images/trio-glow.jpg", pos: "object-[50%_center]" },
+  { src: "/images/tub-bench-dark.jpg", pos: "object-[35%_center]" },
   { src: "/images/tub-marble-bright.jpg", pos: "object-[40%_center]" },
-  { src: "/images/hero-trio-dark.jpg", pos: "object-[85%_center]" },
 ];
 
 export default function VideoStrip() {

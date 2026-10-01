@@ -8,10 +8,10 @@ const STATS = [
 ];
 
 const COLLAGE = [
-  { src: "/images/scoop-shaker-gym.jpg", alt: "Lifter loading a shaker with Citrus Surge", pos: "object-[50%_20%]" },
+  { src: "/images/flatlay-dark.jpg", alt: "Citrus Surge flat lay with oranges, shaker and dumbbell", pos: "object-[50%_35%]" },
   { src: "/images/tub-bench-dark.jpg", alt: "Citrus Surge tub on a gym bench", pos: "object-[40%_60%]" },
   { src: "/images/tub-splash-white.jpg", alt: "Citrus Surge with fresh orange splash", pos: "object-center" },
-  { src: "/images/tub-bench-shaker.jpg", alt: "Citrus Surge tub and shaker between dumbbells", pos: "object-[60%_50%]" },
+  { src: "/images/tub-solo-marble-splash.jpg", alt: "Citrus Surge tub with a citrus splash on marble", pos: "object-center" },
 ];
 
 const FOOTNOTE = "Post-purchase survey (June 2026) of over 1,500 customers using Citrus Surge at least 4 times a week.";

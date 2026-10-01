@@ -16,8 +16,8 @@ const TABS = [
   {
     id: "pumps",
     label: "Pumps",
-    img: "/images/tub-bench-dark.jpg",
-    pos: "object-[40%_center]",
+    img: "/images/tub-solo-dark.jpg",
+    pos: "object-center",
     bullets: [
       "8g of pure L-citrulline — the full clinical dose",
       "Nitrosigine to keep blood flowing set after set",
@@ -27,7 +27,7 @@ const TABS = [
   {
     id: "strength",
     label: "Strength",
-    img: "/images/hero-trio-dark.jpg",
+    img: "/images/trio-glow.jpg",
     pos: "object-[30%_center]",
     bullets: [
       "3.2g of CarnoSyn beta-alanine for muscular endurance",

@@ -36,9 +36,9 @@ export default function IngredientsSection() {
       <div className="px-5 pt-12 lg:hidden">
         <div className="overflow-hidden rounded-xl border border-line shadow-[0_16px_40px_-20px_rgba(22,16,9,0.4)]">
           <img
-            src="/images/scoop-overhead-marble.jpg"
-            alt="Overhead shot of a scoop of Citrus Surge powder over the tub"
-            className="aspect-[4/3] w-full object-cover object-[50%_30%]"
+            src="/images/flatlay-dark.jpg"
+            alt="Flat lay of the Citrus Surge tub, powder scoop, shaker and fresh citrus"
+            className="aspect-[4/3] w-full object-cover object-[50%_42%]"
             loading="lazy"
           />
         </div>

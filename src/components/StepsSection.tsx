@@ -5,8 +5,8 @@ const STEPS = [
     n: "01",
     title: "Scoop",
     text: "One full scoop of Citrus Surge into 8–10oz of cold water.",
-    img: "/images/scoop-overhead-marble.jpg",
-    pos: "object-[50%_20%]",
+    img: "/images/flatlay-dark.jpg",
+    pos: "object-[55%_42%]",
   },
   {
     n: "02",
