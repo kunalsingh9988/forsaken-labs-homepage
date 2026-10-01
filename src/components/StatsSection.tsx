@@ -8,10 +8,8 @@ const STATS = [
 ];
 
 const COLLAGE = [
-  { src: "/images/flatlay-dark.jpg", alt: "Citrus Surge flat lay with oranges, shaker and dumbbell", pos: "object-[50%_35%]" },
-  { src: "/images/tub-bench-dark.jpg", alt: "Citrus Surge tub on a gym bench", pos: "object-[40%_60%]" },
-  { src: "/images/tub-splash-white.jpg", alt: "Citrus Surge with fresh orange splash", pos: "object-center" },
-  { src: "/images/tub-solo-marble-splash.jpg", alt: "Citrus Surge tub with a citrus splash on marble", pos: "object-center" },
+  { src: "/images/ugc-cafe-tub.jpg", alt: "A member of the Forsaken community holding a Citrus Surge tub", pos: "object-[45%_40%]" },
+  { src: "/images/ugc-rest-drink.jpg", alt: "A lifter drinking Citrus Surge post-workout with the tub beside him", pos: "object-[55%_45%]" },
 ];
 
 const FOOTNOTE = "Post-purchase survey (June 2026) of over 1,500 customers using Citrus Surge at least 4 times a week.";
@@ -50,7 +48,7 @@ export default function StatsSection() {
         </div>
 
         <div className="w-full max-w-[480px] lg:w-[580px] shrink-0">
-          <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden lg:aspect-[580/432] aspect-square">
+          <div className="grid grid-cols-2 gap-3 rounded-lg overflow-hidden lg:aspect-[580/432] aspect-[3/4] sm:aspect-square">
             {COLLAGE.map((img) => (
               <img
                 key={img.src}
