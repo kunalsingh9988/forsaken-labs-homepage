@@ -1,13 +1,13 @@
 import { H2, Texture } from "./ui";
 
 const THUMBS = [
-  { src: "/images/scoop-shaker-gym.jpg", pos: "object-[40%_25%]" },
+  { src: "/images/ugc-scoop-kitchen.jpg", pos: "object-[45%_35%]" },
   { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
+  { src: "/images/ugc-locker-selfie.jpg", pos: "object-[50%_35%]" },
+  { src: "/images/tub-inferno.jpg", pos: "object-[50%_55%]" },
+  { src: "/images/ugc-desk-tub.jpg", pos: "object-[58%_30%]" },
   { src: "/images/flatlay-dark.jpg", pos: "object-[50%_40%]" },
-  { src: "/images/tub-solo-dark.jpg", pos: "object-center" },
-  { src: "/images/trio-glow.jpg", pos: "object-[50%_center]" },
-  { src: "/images/tub-bench-dark.jpg", pos: "object-[35%_center]" },
-  { src: "/images/tub-marble-bright.jpg", pos: "object-[40%_center]" },
+  { src: "/images/ugc-gym-selfie.jpg", pos: "object-[40%_30%]" },
 ];
 
 export default function VideoStrip() {
@@ -32,13 +32,11 @@ export default function VideoStrip() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-ink/15 transition-colors duration-300 group-hover:bg-ink/5" />
-              {i === 0 && (
-                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-cream/90">
-                  <svg viewBox="0 0 14 16" className="w-4 h-4 translate-x-[1px] text-ink" fill="currentColor">
-                    <path d="M0 0l14 8-14 8V0Z" />
-                  </svg>
-                </span>
-              )}
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-cream/90 transition-transform duration-300 group-hover:scale-110">
+                <svg viewBox="0 0 14 16" className="w-4 h-4 translate-x-[1px] text-ink" fill="currentColor">
+                  <path d="M0 0l14 8-14 8V0Z" />
+                </svg>
+              </span>
             </div>
           ))}
         </div>
