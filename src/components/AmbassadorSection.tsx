@@ -7,9 +7,9 @@ export default function AmbassadorSection() {
       <div className="relative flex flex-col lg:h-[600px] lg:flex-row items-stretch">
         <div className="relative min-h-[300px] lg:min-h-0 lg:w-1/2">
           <img
-            src="/images/tub-bench-dark.jpg"
-            alt="Citrus Surge tub and shaker on a gym bench under moody light"
-            className="absolute inset-0 h-full w-full object-cover"
+            src="/images/tub-inferno.jpg"
+            alt="Citrus Surge tub on wet stone with a burst of orange and citrus around it"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_55%]"
             loading="lazy"
           />
         </div>
