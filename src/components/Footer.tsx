@@ -44,48 +44,60 @@ export default function Footer() {
 
   return (
     <footer id="footer" className="relative bg-[#0f0c08] text-cream">
-      <div className="mx-auto max-w-[1200px] px-5 pb-8 pt-14 lg:px-0 lg:pt-20">
-        {/* newsletter */}
-        <div className="flex flex-col items-center gap-6 border-b border-cream/10 pb-12 text-center">
-          <h2 className="font-mulish font-extrabold text-[26px] lg:text-[32px] leading-8 tracking-[-0.01em]">
-            Unlock 10% off
-          </h2>
-          <p className="max-w-[420px] text-[15px] leading-6 text-cream/70">
-            Join the Forsaken — early access to drops, exclusive discounts, and zero spam.
-          </p>
-          {subscribed ? (
-            <p className="rounded-lg border border-moss/40 bg-moss/10 px-6 py-3 font-mulish text-[15px] font-bold text-moss">
-              Welcome to the Forsaken. Check your inbox.
+      {/* newsletter — full-bleed photo, copy on the left over a scrim */}
+      <div className="relative overflow-hidden">
+        <img
+          src="/images/tub-bench-dark.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-[70%_center] lg:object-center"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0c08] via-[#0f0c08]/85 to-[#0f0c08]/55 lg:via-[#0f0c08]/70 lg:to-[#0f0c08]/10" />
+        <div className="relative mx-auto flex max-w-[1200px] px-5 py-14 lg:px-0 lg:py-20">
+          <div className="flex w-full max-w-[560px] flex-col items-start gap-6 text-left">
+            <h2 className="font-mulish font-extrabold text-[26px] lg:text-[32px] leading-8 tracking-[-0.01em]">
+              Unlock 10% off
+            </h2>
+            <p className="max-w-[420px] text-[15px] leading-6 text-cream/70">
+              Join the Forsaken — early access to drops, exclusive discounts, and zero spam.
             </p>
-          ) : (
-            <form
-              className="flex w-full max-w-[460px] items-center gap-3"
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (email.trim()) setSubscribed(true);
-              }}
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="h-12 flex-1 rounded-lg border border-cream/20 bg-cream/5 px-4 font-mulish text-[15px] text-cream placeholder:text-cream/40 outline-none focus:border-orange"
-              />
-              <button
-                type="submit"
-                className="h-12 shrink-0 rounded-lg bg-orange px-6 font-mulish text-[15px] font-extrabold text-ink transition-colors hover:bg-orange-2 cursor-pointer"
+            {subscribed ? (
+              <p className="rounded-lg border border-moss/40 bg-moss/10 px-6 py-3 font-mulish text-[15px] font-bold text-moss">
+                Welcome to the Forsaken. Check your inbox.
+              </p>
+            ) : (
+              <form
+                className="flex w-full max-w-[460px] flex-col gap-3 sm:flex-row sm:items-center"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (email.trim()) setSubscribed(true);
+                }}
               >
-                Submit
-              </button>
-            </form>
-          )}
-          <p className="max-w-[520px] text-[11px] leading-4 text-cream/45">
-            By entering your email you agree to receive marketing emails from Forsaken Labs. Consent is not a
-            condition of purchase. View our Privacy Policy for more details.
-          </p>
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  className="h-12 flex-1 rounded-lg border border-cream/20 bg-cream/5 px-4 font-mulish text-[15px] text-cream placeholder:text-cream/40 outline-none focus:border-orange"
+                />
+                <button
+                  type="submit"
+                  className="h-12 shrink-0 rounded-lg bg-orange px-6 font-mulish text-[15px] font-extrabold text-ink transition-colors hover:bg-orange-2 cursor-pointer"
+                >
+                  Submit
+                </button>
+              </form>
+            )}
+            <p className="max-w-[520px] text-[11px] leading-4 text-cream/45">
+              By entering your email you agree to receive marketing emails from Forsaken Labs. Consent is not a
+              condition of purchase. View our Privacy Policy for more details.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="mx-auto max-w-[1200px] px-5 pb-8 lg:px-0">
 
         {/* link columns */}
         <div className="grid grid-cols-2 gap-8 py-12 sm:grid-cols-3 lg:grid-cols-4">
