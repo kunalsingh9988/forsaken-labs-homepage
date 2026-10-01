@@ -6,9 +6,9 @@ export default function Hero() {
       {/* bg image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/images/trio-glow.jpg"
+          src="/images/hero-trio-dark.jpg"
           alt="Forsaken Labs Citrus Surge pre-workout tubs surrounded by fresh oranges"
-          className="h-full w-full object-cover object-[62%_center] lg:object-center"
+          className="h-full w-full object-cover object-[68%_center] lg:object-center"
         />
         {/* readability scrims — mobile gets even vertical coverage for the centered
             copy; desktop fades left so the product trio stays visible on the right */}
