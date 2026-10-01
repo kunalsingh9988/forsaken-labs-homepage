@@ -21,6 +21,7 @@ import CreativeSection from "./components/CreativeSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import ChatBubble from "./components/ChatBubble";
+import { Reveal } from "./components/ui";
 
 export default function App() {
   return (
@@ -30,24 +31,24 @@ export default function App() {
       <main>
         <Hero />
         <Marquee />
-        <StatsSection />
-        <RitualSection />
-        <CompareTabs />
-        <VideoStrip />
-        <TestimonialCarousel />
-        <PressStrip />
-        <ScienceTabs />
-        <StepsSection />
-        <FlavorsSection />
-        <SubscribeSection />
-        <ValueSection />
-        <IngredientsSection />
+        <Reveal><StatsSection /></Reveal>
+        <Reveal><RitualSection /></Reveal>
+        <Reveal><CompareTabs /></Reveal>
+        <Reveal><VideoStrip /></Reveal>
+        <Reveal><TestimonialCarousel /></Reveal>
+        <Reveal><PressStrip /></Reveal>
+        <Reveal><ScienceTabs /></Reveal>
+        <Reveal><StepsSection /></Reveal>
+        <Reveal><FlavorsSection /></Reveal>
+        <Reveal><SubscribeSection /></Reveal>
+        <Reveal><ValueSection /></Reveal>
+        <Reveal><IngredientsSection /></Reveal>
         <Marquee2 />
-        <CertSection />
-        <ReviewsSection />
-        <AmbassadorSection />
-        <CreativeSection />
-        <FaqSection />
+        <Reveal><CertSection /></Reveal>
+        <Reveal><ReviewsSection /></Reveal>
+        <Reveal><AmbassadorSection /></Reveal>
+        <Reveal><CreativeSection /></Reveal>
+        <Reveal><FaqSection /></Reveal>
       </main>
       <Footer />
       <ChatBubble />

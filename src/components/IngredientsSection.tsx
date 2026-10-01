@@ -31,18 +31,31 @@ export default function IngredientsSection() {
   }, [open]);
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="relative overflow-hidden bg-cream">
+      {/* mobile: product photo on top, copy below — nothing overlaid */}
+      <div className="px-5 pt-12 lg:hidden">
+        <div className="overflow-hidden rounded-xl border border-line shadow-[0_16px_40px_-20px_rgba(22,16,9,0.4)]">
+          <img
+            src="/images/scoop-overhead-marble.jpg"
+            alt="Overhead shot of a scoop of Citrus Surge powder over the tub"
+            className="aspect-[4/3] w-full object-cover object-[50%_30%]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* desktop: full-bleed photo left, solid cream under the copy on the right */}
+      <div className="absolute inset-0 hidden lg:block">
         <img
           src="/images/scoop-overhead-marble.jpg"
           alt=""
-          className="h-full w-full object-cover object-[25%_center]"
+          className="h-full w-full object-cover object-[18%_center]"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream/40 via-cream/70 to-cream/95" />
+        <div className="ingredients-scrim absolute inset-0" />
       </div>
 
-      <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-5 py-14 lg:grid-cols-2 lg:py-24">
+      <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-5 pb-12 pt-8 lg:grid-cols-2 lg:px-0 lg:py-24">
         <div className="hidden lg:block" />
         <div className="flex flex-col items-start gap-6">
           <H2>
@@ -59,7 +72,7 @@ export default function IngredientsSection() {
             {STATS.map((s) => (
               <div key={s.label} className="flex flex-col gap-1 border-l-2 border-orange pl-4">
                 <span className="font-display text-[28px] lg:text-[32px] font-bold leading-8 text-ink">{s.value}</span>
-                <span className="text-[12px] lg:text-[13px] font-mulish font-bold uppercase tracking-[0.08em] text-cocoa">
+                <span className="text-[11px] lg:text-[12px] font-mulish font-bold uppercase tracking-[0.06em] text-cocoa whitespace-nowrap">
                   {s.label}
                 </span>
               </div>

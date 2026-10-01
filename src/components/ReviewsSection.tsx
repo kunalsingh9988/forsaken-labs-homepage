@@ -168,7 +168,7 @@ export default function ReviewsSection() {
           {REVIEWS[tab].map((r) => (
             <article
               key={r.name}
-              className="flex w-[300px] shrink-0 snap-start flex-col gap-4 rounded-xl bg-cream p-6 lg:w-[360px] lg:p-8"
+              className="flex w-[300px] shrink-0 snap-start flex-col gap-4 rounded-xl bg-cream p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_-18px_rgba(22,16,9,0.4)] lg:w-[360px] lg:p-8"
             >
               <Stars size="w-4 h-4" />
               <h3 className="font-display text-[22px] lg:text-[24px] font-bold leading-7 text-ink">{r.title}</h3>

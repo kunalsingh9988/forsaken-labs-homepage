@@ -5,7 +5,7 @@ const TILES = [
   { src: "/images/scoop-shaker-gym.jpg", pos: "object-[50%_15%]" },
   { src: "/images/hero-trio-dark.jpg", pos: "object-[20%_center]" },
   { src: "/images/tub-marble-bright.jpg", pos: "object-[60%_60%]" },
-  { src: "/images/tub-bench-shaker.png", pos: "object-[55%_center]" },
+  { src: "/images/tub-bench-shaker.jpg", pos: "object-[55%_center]" },
   { src: "/images/scoop-overhead-marble.jpg", pos: "object-[50%_70%]" },
   { src: "/images/tub-bench-dark.jpg", pos: "object-center" },
   { src: "/images/hero-trio-dark.jpg", pos: "object-[80%_center]" },
@@ -19,13 +19,14 @@ export default function CreativeSection() {
       <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="grid aspect-square w-full max-w-[568px] grid-cols-3 gap-2 overflow-hidden rounded-xl mx-auto">
           {TILES.map((t, i) => (
-            <img
-              key={i}
-              src={t.src}
-              alt={i === 0 ? "Citrus Surge content from the Forsaken community" : ""}
-              className={`h-full w-full object-cover ${t.pos}`}
-              loading="lazy"
-            />
+            <div key={i} className="overflow-hidden">
+              <img
+                src={t.src}
+                alt={i === 0 ? "Citrus Surge content from the Forsaken community" : ""}
+                className={`h-full w-full object-cover transition-transform duration-500 hover:scale-110 ${t.pos}`}
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
 

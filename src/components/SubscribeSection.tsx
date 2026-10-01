@@ -14,7 +14,7 @@ export default function SubscribeSection() {
       <div className="mx-auto flex max-w-[1200px] flex-col lg:h-[656px] lg:flex-row items-stretch">
         <div className="relative min-h-[320px] lg:min-h-0 lg:w-1/2">
           <img
-            src="/images/tub-bench-shaker.png"
+            src="/images/tub-bench-shaker.jpg"
             alt="Citrus Surge tub and shaker resting between dumbbells"
             className="absolute inset-0 h-full w-full object-cover object-[60%_center]"
             loading="lazy"

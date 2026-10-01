@@ -11,8 +11,10 @@ const COLLAGE = [
   { src: "/images/scoop-shaker-gym.jpg", alt: "Lifter loading a shaker with Citrus Surge", pos: "object-[50%_20%]" },
   { src: "/images/tub-bench-dark.jpg", alt: "Citrus Surge tub on a gym bench", pos: "object-[40%_60%]" },
   { src: "/images/tub-splash-white.jpg", alt: "Citrus Surge with fresh orange splash", pos: "object-center" },
-  { src: "/images/tub-bench-shaker.png", alt: "Citrus Surge tub and shaker between dumbbells", pos: "object-[60%_50%]" },
+  { src: "/images/tub-bench-shaker.jpg", alt: "Citrus Surge tub and shaker between dumbbells", pos: "object-[60%_50%]" },
 ];
+
+const FOOTNOTE = "Post-purchase survey (June 2026) of over 1,500 customers using Citrus Surge at least 4 times a week.";
 
 export default function StatsSection() {
   return (
@@ -29,7 +31,7 @@ export default function StatsSection() {
             {STATS.map((s) => (
               <div
                 key={s.value}
-                className="bg-sand-2 rounded-md px-4 py-6 flex flex-col items-center text-center self-start"
+                className="bg-sand-2 rounded-md px-4 py-6 flex flex-col items-center text-center self-start transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_-14px_rgba(22,16,9,0.35)]"
               >
                 <span className="font-sans font-medium text-[32px] leading-9 text-ink">{s.value}</span>
                 <span className="mt-2 text-[12px] leading-4 text-ink">
@@ -41,8 +43,9 @@ export default function StatsSection() {
             ))}
           </div>
 
-          <p className="mt-4 text-center lg:text-left text-[11px] leading-4 text-cocoa/80 max-w-[480px] mx-auto lg:mx-0">
-            <sup>†</sup>Post-purchase survey (June 2026) of over 1,500 customers using Citrus Surge at least 4 times a week.
+          <p className="mt-4 hidden text-center text-[11px] leading-4 text-cocoa/80 lg:block lg:text-left">
+            <sup>†</sup>
+            {FOOTNOTE}
           </p>
         </div>
 
@@ -59,6 +62,11 @@ export default function StatsSection() {
             ))}
           </div>
         </div>
+
+        <p className="text-center text-[11px] leading-4 text-cocoa/80 lg:hidden">
+          <sup>†</sup>
+          {FOOTNOTE}
+        </p>
       </div>
     </section>
   );

@@ -38,11 +38,11 @@ export default function StepsSection() {
         <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-10">
           {STEPS.map((s) => (
             <div key={s.n} className="flex flex-col gap-4">
-              <div className="relative aspect-[368/276] overflow-hidden rounded-lg">
+              <div className="group relative aspect-[368/276] overflow-hidden rounded-lg">
                 <img
                   src={s.img}
                   alt={`${s.title} — Citrus Surge`}
-                  className={`h-full w-full object-cover ${s.pos}`}
+                  className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${s.pos}`}
                   loading="lazy"
                 />
                 <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 font-mulish text-[12px] font-extrabold tracking-[0.14em] text-orange-2">

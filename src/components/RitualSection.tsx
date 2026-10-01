@@ -11,7 +11,7 @@ const POINTS = [
 export default function RitualSection() {
   return (
     <section className="relative bg-ink">
-      <div className="mx-auto max-w-[1200px] lg:h-[656px] flex flex-col-reverse lg:flex-row items-stretch">
+      <div className="mx-auto max-w-[1200px] lg:h-[656px] flex flex-col lg:flex-row items-stretch">
         <div className="lg:w-1/2 relative min-h-[320px] lg:min-h-0">
           <img
             src="/images/scoop-shaker-gym.jpg"

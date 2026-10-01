@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /* ---------- stars ---------- */
 export function StarIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -97,9 +97,37 @@ export function Eyebrow({ children, className = "text-orange" }: { children: Rea
 
 export function H2({ children, className = "text-ink", center = false }: { children: ReactNode; className?: string; center?: boolean }) {
   return (
-    <h2 className={`font-display font-bold text-[28px] leading-[32px] md:text-[40px] md:leading-[44px] ${center ? "text-center" : ""} ${className}`}>
+    <h2 className={`font-display font-bold tracking-[-0.01em] text-[28px] leading-[34px] md:text-[40px] md:leading-[44px] ${center ? "text-center" : ""} ${className}`}>
       {children}
     </h2>
+  );
+}
+
+/* gentle scroll-in reveal for section wrappers */
+export function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.06, rootMargin: "0px 0px -48px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className={`reveal ${visible ? "visible" : ""} ${className}`}>
+      {children}
+    </div>
   );
 }
 
@@ -117,12 +145,13 @@ export function CtaButton({
   const tones = {
     dark: "bg-ink text-cream border-ink hover:bg-espresso",
     light: "bg-cream text-ink border-cream hover:bg-sand-2",
-    orange: "bg-orange text-ink border-orange hover:bg-orange-2",
+    orange:
+      "bg-orange text-ink border-orange hover:bg-orange-2 shadow-[0_12px_30px_-10px_rgba(245,100,10,0.65)]",
   };
   return (
     <button
       onClick={onClick}
-      className={`inline-flex items-center justify-center border rounded-lg px-5 py-[13px] text-[16px] leading-[18.6px] transition-colors cursor-pointer ${tones[tone]} ${className}`}
+      className={`inline-flex items-center justify-center border rounded-lg px-5 py-[13px] text-[16px] leading-[18.6px] transition-all duration-200 active:scale-[0.98] cursor-pointer ${tones[tone]} ${className}`}
     >
       {children}
     </button>

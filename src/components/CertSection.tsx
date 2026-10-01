@@ -67,7 +67,10 @@ export default function CertSection() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {CERTS.map((c) => (
-            <div key={c.title} className="flex flex-col gap-3 rounded-xl border border-line bg-cream p-6">
+            <div
+              key={c.title}
+              className="flex flex-col gap-3 rounded-xl border border-line bg-cream p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange/50 hover:shadow-[0_14px_36px_-16px_rgba(22,16,9,0.3)]"
+            >
               <span className="text-orange">{c.icon}</span>
               <h3 className="font-mulish text-[16px] font-extrabold text-ink-2">{c.title}</h3>
               <p className="text-[13px] leading-5 text-cocoa">{c.text}</p>

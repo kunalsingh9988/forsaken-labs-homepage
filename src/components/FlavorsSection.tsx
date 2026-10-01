@@ -29,20 +29,32 @@ export default function FlavorsSection() {
   const flavor = FLAVORS.find((f) => f.id === activeId) ?? FLAVORS[0];
 
   return (
-    <section id="flavors" className="relative overflow-hidden">
-      {/* bg photo */}
-      <div className="absolute inset-0">
+    <section id="flavors" className="relative overflow-hidden bg-cream">
+      {/* mobile: product photo on top, copy below — nothing overlaid */}
+      <div className="px-5 pt-12 lg:hidden">
+        <div className="overflow-hidden rounded-xl border border-line shadow-[0_16px_40px_-20px_rgba(22,16,9,0.4)]">
+          <img
+            src="/images/tub-marble-bright.jpg"
+            alt="Citrus Surge tub and shaker on marble with fresh oranges"
+            className="aspect-[4/3] w-full object-cover object-[35%_40%]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* desktop: full-bleed photo left, quiet gradient under the copy on the right */}
+      <div className="absolute inset-0 hidden lg:block">
         <img
           src="/images/tub-marble-bright.jpg"
           alt=""
           className="h-full w-full object-cover object-[30%_center]"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream/30 via-cream/55 to-cream/90" />
+        <div className="photo-scrim absolute inset-0" />
       </div>
 
-      <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-5 py-14 lg:grid-cols-2 lg:px-0 lg:py-24">
-        {/* left stays empty — the product photo shows through, matching the reference layout */}
+      <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-5 pb-12 pt-8 lg:grid-cols-2 lg:px-0 lg:py-24">
+        {/* left stays empty on desktop — the product photo shows through */}
         <div className="hidden lg:block" />
 
         <div className="flex flex-col items-start gap-6">
