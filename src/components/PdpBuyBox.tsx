@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Stars, CheckCircle } from "./ui";
+import { Stars } from "./ui";
+
+const CHECK = "/images/check-orange.png";
 
 const SLIDES = [
   { src: "/images/tub-solo-marble-splash.jpg", alt: "Citrus Surge tub with citrus splash and ice on marble", pos: "object-center" },
@@ -102,7 +104,7 @@ export default function PdpBuyBox() {
           <ul className="mt-5 space-y-2.5">
             {BENEFITS.map((b) => (
               <li key={b} className="flex items-center gap-2.5 text-[14px] font-sans font-semibold text-ink-2">
-                <CheckCircle /> {b}
+                <img src={CHECK} alt="" className="h-5 w-5 shrink-0" /> {b}
               </li>
             ))}
           </ul>
