@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Stars } from "./ui";
 
 export default function Hero() {
@@ -41,12 +42,11 @@ export default function Hero() {
               and zero artificial junk — engineered for brutal workouts and relentless progress.
             </p>
 
-            <a
-              href="#flavors"
+            <Link to="/product"
               className="mt-4 inline-flex w-full max-w-[300px] items-center justify-center rounded-lg border border-orange bg-orange px-5 py-[13px] text-[16px] leading-[18.6px] text-ink shadow-[0_14px_36px_-10px_rgba(245,100,10,0.8)] transition-all duration-200 hover:bg-orange-2 active:scale-[0.98] lg:w-auto lg:min-w-[258px]"
             >
               Try Citrus Surge
-            </a>
+            </Link>
           </div>
         </div>
       </div>

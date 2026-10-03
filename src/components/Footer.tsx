@@ -1,22 +1,44 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Logo, Stars } from "./ui";
 
 const COLS = [
   {
     title: "Shop",
-    links: ["Citrus Surge", "Subscribe & Save", "All Products", "Gift Cards"],
+    links: [
+      { label: "Citrus Surge", href: "/product" },
+      { label: "Subscribe & Save", href: "/product" },
+      { label: "All Products", href: "/shop" },
+      { label: "Gift Cards", href: "/gift-cards" },
+    ],
   },
   {
     title: "Explore",
-    links: ["Our Story", "The Formula", "Lab Results", "Reviews"],
+    links: [
+      { label: "Our Story", href: "/our-story" },
+      { label: "The Formula", href: "/science" },
+      { label: "Lab Results", href: "/science" },
+      { label: "Reviews", href: "/reviews" },
+    ],
   },
   {
     title: "Support",
-    links: ["FAQ", "Shipping & Returns", "Contact Us", "Forsaken Guarantee"],
+    links: [
+      { label: "FAQ", href: "/faq" },
+      { label: "Shipping & Returns", href: "/shipping" },
+      { label: "Contact Us", href: "/contact" },
+      { label: "Forsaken Guarantee", href: "/guarantee" },
+    ],
   },
 ];
 
-const LEGAL = ["Privacy Policy", "Terms of Service", "Refund Policy", "Accessibility", "Do Not Sell My Info"];
+const LEGAL = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Refund Policy", href: "/refund" },
+  { label: "Accessibility", href: "/accessibility" },
+  { label: "Do Not Sell My Info", href: "/do-not-sell" },
+];
 
 const PAYS = ["pay-visa", "pay-amex", "pay-discover", "pay-mc", "pay-paypal", "pay-affirm"];
 
@@ -133,9 +155,9 @@ export default function Footer() {
                 {col.title}
               </h3>
               {col.links.map((l) => (
-                <a key={l} href="#" className="text-[14px] leading-5 text-cream/80 transition-colors hover:text-orange">
-                  {l}
-                </a>
+                <Link key={l.label} to={l.href} className="text-[14px] leading-5 text-cream/80 transition-colors hover:text-orange">
+                  {l.label}
+                </Link>
               ))}
             </div>
           ))}
@@ -151,10 +173,10 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6 border-t border-cream/10 pt-8">
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {LEGAL.map((l) => (
-              <li key={l}>
-                <a href="#" className="text-[12px] text-cream/50 transition-colors hover:text-cream">
-                  {l}
-                </a>
+              <li key={l.label}>
+                <Link to={l.href} className="text-[12px] text-cream/50 transition-colors hover:text-cream">
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>

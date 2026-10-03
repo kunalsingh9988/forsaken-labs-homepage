@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 /* ---------- stars ---------- */
 export function StarIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -53,7 +54,7 @@ export function CheckCircle({ tone = "light" }: { tone?: "light" | "dark" }) {
 /* ---------- logo ---------- */
 export function Logo({ light = false, className = "" }: { light?: boolean; className?: string }) {
   return (
-    <a href="#" aria-label="Forsaken Labs home" className={`flex items-center gap-2 ${className}`}>
+    <Link to="/" aria-label="Forsaken Labs home" className={`flex items-center gap-2 ${className}`}>
       <svg viewBox="0 0 32 32" className="h-[26px] w-[26px] shrink-0" aria-hidden>
         <path d="M16 1l4.4 10.6L31 16l-10.6 4.4L16 31l-4.4-10.6L1 16l10.6-4.4L16 1Z" className="fill-orange" />
         <circle cx="16" cy="16" r="3.4" className={light ? "fill-ink" : "fill-cream"} />
@@ -62,7 +63,7 @@ export function Logo({ light = false, className = "" }: { light?: boolean; class
         FORSAKEN
         <span className="text-orange"> LABS</span>
       </span>
-    </a>
+    </Link>
   );
 }
 

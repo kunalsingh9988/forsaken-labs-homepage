@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { H2, Texture } from "./ui";
 
 const FAQS = [
@@ -40,9 +41,9 @@ export default function FaqSection() {
           <H2>Got Questions?</H2>
           <p className="max-w-[380px] text-[15px] lg:text-[16px] leading-7 text-cocoa">
             Everything you need to know about Citrus Surge and the Forsaken way. Still stuck?{" "}
-            <a href="#footer" className="font-sans font-bold text-orange underline underline-offset-4">
+            <Link to="/contact" className="font-sans font-bold text-orange underline underline-offset-4">
               Talk to us
-            </a>
+            </Link>
             .
           </p>
         </div>

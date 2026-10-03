@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Stars } from "./ui";
 
@@ -98,17 +99,16 @@ export default function FlavorsSection() {
               </span>
             </div>
           ) : (
-            <a href="#footer" className="text-[13px] font-sans font-bold text-orange underline underline-offset-4">
+            <Link to="/contact" className="text-[13px] font-sans font-bold text-orange underline underline-offset-4">
               Get notified →
-            </a>
+            </Link>
           )}
 
-          <a
-            href="#"
+          <Link to="/product"
             className="inline-flex min-w-[258px] items-center justify-center rounded-lg border border-ink bg-ink px-5 py-[13px] text-[16px] leading-[18.6px] text-cream transition-colors hover:bg-espresso"
           >
             {flavor.active ? "Shop Citrus Surge — $49.99" : "Notify Me"}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

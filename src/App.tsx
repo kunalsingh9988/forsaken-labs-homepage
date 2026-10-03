@@ -1,57 +1,52 @@
-import Header, { AnnouncementBar } from "./components/Header";
-import Hero from "./components/Hero";
-import Marquee from "./components/Marquee";
-import StatsSection from "./components/StatsSection";
-import RitualSection from "./components/RitualSection";
-import CompareTabs from "./components/CompareTabs";
-import VideoStrip from "./components/VideoStrip";
-import TestimonialCarousel from "./components/TestimonialCarousel";
-import PressStrip from "./components/PressStrip";
-import ScienceTabs from "./components/ScienceTabs";
-import StepsSection from "./components/StepsSection";
-import FlavorsSection from "./components/FlavorsSection";
-import SubscribeSection from "./components/SubscribeSection";
-import ValueSection from "./components/ValueSection";
-import IngredientsSection from "./components/IngredientsSection";
-import Marquee2 from "./components/Marquee2";
-import CertSection from "./components/CertSection";
-import ReviewsSection from "./components/ReviewsSection";
-import AmbassadorSection from "./components/AmbassadorSection";
-import CreativeSection from "./components/CreativeSection";
-import FaqSection from "./components/FaqSection";
-import Footer from "./components/Footer";
-import ChatBubble from "./components/ChatBubble";
-import { Reveal } from "./components/ui";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
+import ShopPage from "./pages/ShopPage";
+import StoryPage from "./pages/StoryPage";
+import SciencePage from "./pages/SciencePage";
+import ReviewsPage from "./pages/ReviewsPage";
+import FaqPage from "./pages/FaqPage";
+import ContactPage from "./pages/ContactPage";
+import GiftCardsPage from "./pages/GiftCardsPage";
+import PolicyPage from "./pages/PolicyPage";
+import NotFoundPage from "./pages/NotFoundPage";
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (!hash) window.scrollTo(0, 0);
+    else document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+  }, [pathname, hash]);
+  return null;
+}
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-cream">
-      <AnnouncementBar />
-      <Header />
-      <main>
-        <Hero />
-        <Marquee />
-        <Reveal><StatsSection /></Reveal>
-        <Reveal><RitualSection /></Reveal>
-        <Reveal><CompareTabs /></Reveal>
-        <Reveal><VideoStrip /></Reveal>
-        <Reveal><TestimonialCarousel /></Reveal>
-        <Reveal><PressStrip /></Reveal>
-        <Reveal><ScienceTabs /></Reveal>
-        <Reveal><StepsSection /></Reveal>
-        <Reveal><FlavorsSection /></Reveal>
-        <Reveal><SubscribeSection /></Reveal>
-        <Reveal><ValueSection /></Reveal>
-        <Reveal><IngredientsSection /></Reveal>
-        <Marquee2 />
-        <Reveal><CertSection /></Reveal>
-        <Reveal><ReviewsSection /></Reveal>
-        <Reveal><AmbassadorSection /></Reveal>
-        <Reveal><CreativeSection /></Reveal>
-        <Reveal><FaqSection /></Reveal>
-      </main>
-      <Footer />
-      <ChatBubble />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/our-story" element={<StoryPage />} />
+          <Route path="/science" element={<SciencePage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/gift-cards" element={<GiftCardsPage />} />
+          <Route path="/shipping" element={<PolicyPage slug="shipping" />} />
+          <Route path="/guarantee" element={<PolicyPage slug="guarantee" />} />
+          <Route path="/privacy" element={<PolicyPage slug="privacy" />} />
+          <Route path="/terms" element={<PolicyPage slug="terms" />} />
+          <Route path="/refund" element={<PolicyPage slug="refund" />} />
+          <Route path="/accessibility" element={<PolicyPage slug="accessibility" />} />
+          <Route path="/do-not-sell" element={<PolicyPage slug="do-not-sell" />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

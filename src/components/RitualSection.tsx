@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CheckCircle, Eyebrow, H2 } from "./ui";
 
 const POINTS = [
@@ -37,12 +38,11 @@ export default function RitualSection() {
                 </li>
               ))}
             </ul>
-            <a
-              href="#flavors"
+            <Link to="/product"
               className="mt-2 inline-flex w-fit items-center justify-center rounded-lg border border-cream bg-cream px-5 py-[13px] text-[16px] leading-[18.6px] text-ink transition-colors hover:bg-sand-2"
             >
               Try Citrus Surge
-            </a>
+            </Link>
           </div>
         </div>
       </div>

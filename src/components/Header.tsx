@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Logo } from "./ui";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#top" },
-  { label: "Shop", href: "#flavors" },
-  { label: "The Science", href: "#science" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/" },
+  { label: "Shop", href: "/product" },
+  { label: "The Science", href: "/science" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 function AccountIcon() {
@@ -33,9 +34,9 @@ export function AnnouncementBar() {
         <span className="font-extrabold text-orange-2">CITRUS SURGE</span>
         <span className="mx-1.5 lg:mx-2 opacity-60">—</span>
         THE FIRST DROP IS LIVE<span className="hidden sm:inline">. LIMITED STOCK.</span>
-        <a href="#flavors" className="ml-2 underline underline-offset-2 font-bold hover:text-orange-2 transition-colors">
+        <Link to="/product" className="ml-2 underline underline-offset-2 font-bold hover:text-orange-2 transition-colors">
           Shop now
-        </a>
+        </Link>
       </p>
     </div>
   );
@@ -44,6 +45,12 @@ export function AnnouncementBar() {
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+
+  useEffect(() => {
+    const open = () => setCartOpen(true);
+    window.addEventListener("forsaken:open-cart", open);
+    return () => window.removeEventListener("forsaken:open-cart", open);
+  }, []);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -70,20 +77,20 @@ export default function Header() {
 
           <nav className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
             {NAV_LINKS.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.href}
                 className="text-[15px] leading-5 text-ink-2 hover:text-orange transition-colors"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-4 lg:gap-5">
-            <a href="#" aria-label="Account" className="hidden lg:block text-ink-2 hover:text-orange transition-colors">
+            <Link to="/contact" aria-label="Account" className="hidden lg:block text-ink-2 hover:text-orange transition-colors">
               <AccountIcon />
-            </a>
+            </Link>
             <button
               aria-label="Open cart"
               onClick={() => setCartOpen(true)}
@@ -91,12 +98,12 @@ export default function Header() {
             >
               <CartIcon />
             </button>
-            <a
-              href="#flavors"
+            <Link
+              to="/product"
               className="hidden lg:inline-flex bg-ink text-cream text-[15px] leading-4 rounded-lg px-5 py-3 hover:bg-espresso transition-colors"
             >
               Try Citrus Surge
-            </a>
+            </Link>
             <button
               aria-label="Open menu"
               onClick={() => setMenuOpen(true)}
@@ -129,27 +136,31 @@ export default function Header() {
           </div>
           <nav className="flex flex-col p-5 gap-1">
             {NAV_LINKS.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.href}
                 onClick={() => setMenuOpen(false)}
                 className="py-4 text-[18px] font-sans font-bold text-ink-2 border-b border-line/60"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a href="#" className="py-4 text-[18px] font-sans font-bold text-ink-2 border-b border-line/60">
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="py-4 text-[18px] font-sans font-bold text-ink-2 border-b border-line/60"
+            >
               Account
-            </a>
+            </Link>
           </nav>
           <div className="p-5 mt-auto">
-            <a
-              href="#flavors"
+            <Link
+              to="/product"
               onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center bg-ink text-cream rounded-lg py-4 text-[16px]"
             >
               Try Citrus Surge
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -177,13 +188,13 @@ export default function Header() {
             </svg>
             <p className="font-sans font-bold text-[17px] text-ink-2">Your cart is empty</p>
             <p className="text-[14px] text-cocoa">Fuel up — Citrus Surge is waiting.</p>
-            <a
-              href="#flavors"
+            <Link
+              to="/product"
               onClick={() => setCartOpen(false)}
               className="mt-2 bg-orange text-ink rounded-lg px-6 py-3 text-[15px] font-sans font-bold"
             >
               Shop Citrus Surge
-            </a>
+            </Link>
           </div>
         </div>
       </div>

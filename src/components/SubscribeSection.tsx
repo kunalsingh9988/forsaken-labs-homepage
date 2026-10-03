@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CheckCircle, H2 } from "./ui";
 
 const PERKS = [
@@ -39,12 +40,11 @@ export default function SubscribeSection() {
                 </li>
               ))}
             </ul>
-            <a
-              href="#flavors"
+            <Link to="/product"
               className="mt-2 inline-flex items-center justify-center rounded-lg border border-orange bg-orange px-5 py-[13px] text-[16px] leading-[18.6px] text-ink transition-colors hover:bg-orange-2"
             >
               Subscribe &amp; Save 15%
-            </a>
+            </Link>
           </div>
         </div>
       </div>
