@@ -10,7 +10,7 @@ const FLAVORS = [
     reviews: "1,000+",
     blurb:
       "Bright, sharp citrus built from real flavor — no artificial dyes, no chemical aftertaste. Sweetened clean, mixes clear, and disappears in one shake.",
-    notes: ["Blood orange bite", "Subtle tropical finish", "Zero artificial flavors"],
+    notes: ["Bright citrus bite", "Subtle tropical finish", "Zero artificial flavors"],
   },
   {
     id: "soon1",

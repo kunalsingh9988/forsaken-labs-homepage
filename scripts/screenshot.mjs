@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer-core";
 
-const url = "http://127.0.0.1:5174/";
+const url = process.env.SHOT_URL || "http://localhost:5173/";
 const browser = await puppeteer.launch({
   executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
   headless: true,

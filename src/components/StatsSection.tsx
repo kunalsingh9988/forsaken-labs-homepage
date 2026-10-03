@@ -8,8 +8,8 @@ const STATS = [
 ];
 
 const COLLAGE = [
-  { src: "/images/ugc-cafe-tub.jpg", alt: "A member of the Forsaken community holding a Citrus Surge tub", pos: "object-[45%_40%]" },
-  { src: "/images/ugc-rest-drink.jpg", alt: "A lifter drinking Citrus Surge post-workout with the tub beside him", pos: "object-[55%_45%]" },
+  { src: "/images/flatlay-dark.jpg", alt: "Citrus Surge flat lay with powder scoop, shaker, dumbbell and fresh oranges", pos: "object-[50%_40%]" },
+  { src: "/images/tub-solo-marble-splash.jpg", alt: "Citrus Surge tub with a citrus splash and ice on marble", pos: "object-[50%_45%]" },
 ];
 
 const FOOTNOTE = "Post-purchase survey (June 2026) of over 1,500 customers using Citrus Surge at least 4 times a week.";

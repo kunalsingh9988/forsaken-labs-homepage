@@ -1,17 +1,17 @@
 import { H2, Texture } from "./ui";
 
 const THUMBS = [
-  { src: "/images/ugc-scoop-kitchen.jpg", pos: "object-[45%_35%]" },
-  { src: "/images/ugc-park-tub.jpg", pos: "object-[55%_35%]" },
-  { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
-  { src: "/images/ugc-locker-selfie.jpg", pos: "object-[50%_35%]" },
-  { src: "/images/ugc-shop-point.jpg", pos: "object-[45%_35%]" },
-  { src: "/images/tub-inferno.jpg", pos: "object-[50%_55%]" },
-  { src: "/images/ugc-car-gym.jpg", pos: "object-[60%_35%]" },
   { src: "/images/flatlay-dark.jpg", pos: "object-[50%_40%]" },
-  { src: "/images/ugc-desk-tub.jpg", pos: "object-[58%_30%]" },
-  { src: "/images/ugc-home-scoop.jpg", pos: "object-[50%_35%]" },
-  { src: "/images/ugc-gym-selfie.jpg", pos: "object-[40%_30%]" },
+  { src: "/images/tub-solo-marble-splash.jpg", pos: "object-center" },
+  { src: "/images/tub-inferno.jpg", pos: "object-[50%_55%]" },
+  { src: "/images/trio-sunset.jpg", pos: "object-center" },
+  { src: "/images/tub-solo-dark.jpg", pos: "object-center" },
+  { src: "/images/tub-splash-swirl.jpg", pos: "object-[50%_40%]" },
+  { src: "/images/hero-portrait.jpg", pos: "object-top" },
+  { src: "/images/tub-bench-warm.jpg", pos: "object-[20%_center]" },
+  { src: "/images/tub-splash-white.jpg", pos: "object-center" },
+  { src: "/images/tub-marble-bright.jpg", pos: "object-[40%_center]" },
+  { src: "/images/trio-glow.jpg", pos: "object-center" },
 ];
 
 export default function VideoStrip() {

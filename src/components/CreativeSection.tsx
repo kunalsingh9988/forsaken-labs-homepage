@@ -1,8 +1,8 @@
 import { H2, Texture } from "./ui";
 
 const TILES = [
-  { src: "/images/ugc-scoop-kitchen.jpg", pos: "object-[45%_35%]" },
-  { src: "/images/ugc-gym-selfie.jpg", pos: "object-[40%_30%]" },
+  { src: "/images/tub-inferno.jpg", pos: "object-[50%_55%]" },
+  { src: "/images/tub-splash-swirl.jpg", pos: "object-[50%_40%]" },
 ];
 
 export default function CreativeSection() {

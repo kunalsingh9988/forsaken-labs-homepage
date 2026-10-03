@@ -23,7 +23,7 @@ const FAQS = [
   },
   {
     q: "When should I take it?",
-    a: "Mix one scoop with 8–10oz of cold water 15–20 minutes before training. Avoid taking it within 6 hours of bedtime. Do not exceed one scoop per day.",
+    a: "Mix one scoop with 16–24oz of cold water 15–20 minutes before training. Avoid taking it within 6 hours of bedtime. Do not exceed one scoop per day.",
   },
   {
     q: "Do you offer a guarantee?",
